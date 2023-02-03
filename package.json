@@ -1,0 +1,30 @@
+{
+  "name": "musashi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/csj/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf /dist && npm run build:esm && npm run build:csj",
+    "build:esm": "tsc",
+    "build:csj": "tsc --module commonjs --outDir dist/csj"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
